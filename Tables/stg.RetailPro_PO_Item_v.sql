@@ -1,0 +1,42 @@
+CREATE TABLE [stg].[RetailPro_PO_Item_v]
+(
+[ETL__ID] [bigint] NOT NULL IDENTITY(1, 1),
+[ETL__CreatedDate] [datetime] NOT NULL,
+[ETL__Source] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[ETL__DeltaHashKey] [binary] (32) NULL,
+[PO_SID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_POS] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_SID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PRICE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FC_COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CURRENCY_ID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TAX_CODE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TAX_PERC] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TAX_AREA2_ID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TAX_CODE2] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TAX_PERC2] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SRC_SBS_NO] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UDF_VALUE1] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UDF_VALUE2] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UDF_VALUE3] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UDF_VALUE4] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ECM_FLAG] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE1] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE2] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE3] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE4] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE5] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE6] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE7] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE8] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE9] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ITEM_NOTE10] [nvarchar] (350) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ALT_UPC] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ALT_ALU] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ALT_COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ALT_VEND_CODE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+GO
+ALTER TABLE [stg].[RetailPro_PO_Item_v] ADD CONSTRAINT [PK__RetailPr__C4EA2445231CBC97] PRIMARY KEY CLUSTERED  ([ETL__ID])
+GO

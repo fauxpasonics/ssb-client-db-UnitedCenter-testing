@@ -1,0 +1,41 @@
+CREATE TABLE [stg].[RetailPro_Inventory_v]
+(
+[ETL__ID] [bigint] NOT NULL IDENTITY(1, 1),
+[ETL__CreatedDate] [datetime] NOT NULL,
+[ETL__Source] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[ETL__DeltaHashKey] [binary] (32) NULL,
+[ITEM_SID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DESCRIPTION1] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DESCRIPTION2] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DESCRIPTION3] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DESCRIPTION4] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[UPC] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LOCAL_UPC] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SCALE_NAME] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SIZ_ORD] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[STYLE_SID] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ATTR] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FC_COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FST_RCVD_DATE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LST_RCVD_DATE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LST_SOLD_DATE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CREATED_DATE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MODIFIED_DATE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FST_PRICE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MARKDOWN_PRICE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[LST_RCVD_COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[MIN_ORD_QTY] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VEND_LEAD_TIME] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VEND_LIST_COST] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TRADE_DISC_PERC] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ACTIVE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[ALU] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DCS_CODE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[VEND_CODE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SCALE_NO] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SIZ] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+GO
+ALTER TABLE [stg].[RetailPro_Inventory_v] ADD CONSTRAINT [PK__RetailPr__C4EA2445F51600B9] PRIMARY KEY CLUSTERED  ([ETL__ID])
+GO

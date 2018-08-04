@@ -1,0 +1,62 @@
+CREATE TABLE [ods].[NCR_Department]
+(
+[ETL__ID] [int] NOT NULL IDENTITY(1, 1),
+[ETL__Source] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+[ETL__CreatedDate] [datetime] NOT NULL,
+[ETL__UpdatedDate] [datetime] NOT NULL,
+[ETL__DeltaHashKey] [binary] (32) NULL,
+[ID] [bigint] NULL,
+[Description] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[IsDeleted] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[OrganizationID] [bigint] NULL,
+[IPAddress] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DefaultLocationID] [bigint] NULL,
+[DefaultKeypadID] [bigint] NULL,
+[TaxLevel01] [bigint] NULL,
+[TaxLevel02] [bigint] NULL,
+[TaxLevel03] [bigint] NULL,
+[TaxLevel04] [bigint] NULL,
+[LastIPAddress] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[CountryID] [bigint] NULL,
+[OnlineAccess] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[WeeklyTakingsTypeID] [bigint] NULL,
+[LogicalID] [bigint] NULL,
+[OverrideSupplierTax] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SupplierTax] [decimal] (18, 6) NULL,
+[PrintMovements] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PrintClockOn] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PrintClockOff] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PrintBreakOn] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[PrintBreakOff] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[BudgetTemplateID] [bigint] NULL,
+[SundayRosterTypeID] [bigint] NULL,
+[MondayRosterTypeID] [bigint] NULL,
+[TuesdayRosterTypeID] [bigint] NULL,
+[WednesdayRosterTypeID] [bigint] NULL,
+[ThursdayRosterTypeID] [bigint] NULL,
+[FridayRosterTypeID] [bigint] NULL,
+[SaturdayRosterTypeID] [bigint] NULL,
+[LoyaltyDisclaimer] [nvarchar] (2000) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[TaxLevel05] [bigint] NULL,
+[TaxLevel06] [bigint] NULL,
+[TaxLevel07] [bigint] NULL,
+[TaxLevel08] [bigint] NULL,
+[PrintLaborOnHourly] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[DailyLabourHoursRounding] [bigint] NULL,
+[AutoLogOffTimeOut] [bigint] NULL,
+[DashboardStockFamilyID] [bigint] NULL,
+[DashboardStockFamilyTitle] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[AutoTerminalReportResetEnabled] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[AutoTerminalReportResetTime] [datetime] NULL,
+[ChainCode] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[FuseboxIP] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[OnlyShowLocalRemotePrinters] [nvarchar] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[Code] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
+GO
+ALTER TABLE [ods].[NCR_Department] ADD CONSTRAINT [PK_ods__Department] PRIMARY KEY NONCLUSTERED  ([ETL__ID])
+GO
+CREATE CLUSTERED COLUMNSTORE INDEX [CCI_ods__Department] ON [ods].[NCR_Department]
+GO
+CREATE NONCLUSTERED INDEX [IX_Key] ON [ods].[NCR_Department] ([ID]) INCLUDE ([ETL__DeltaHashKey])
+GO
